@@ -21,6 +21,7 @@ class CreateClienteTable extends Migration {
 			$table->string('nombre_cliente',20);
 			$table->string('apellido_p',20);
 			$table->string('apellido_m',20);
+			$table->string('contrasena_cliente',20);
 			$table->string('email_cliente')->unique();
 			$table->integer('telefono_cliente');
 			$table->rememberToken();

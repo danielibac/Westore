@@ -25,6 +25,7 @@ class CreateEmpleadoTable extends Migration {
 			$table->string('apellido_p',20);
 			$table->string('apellido_m',20);
 			$table->string('email')->unique();
+			$table->string('contrasena_empleado',20);
 			$table->integer('telefono_empleado');
 			$table->rememberToken();
 			$table->timestamps();
