@@ -17,11 +17,11 @@ class CreateClienteTable extends Migration {
 			$table->integer('id_cliente');
 			$table->primary('id_cliente');
 			$table->integer('id_direccion');
-			$table->foreign('id_direccion')->references('id_direccion')->on('direccion');
+			//$table->foreign('id_direccion')->references('id_direccion')->on('direccion');
 			$table->string('nombre_cliente',20);
 			$table->string('apellido_p',20);
 			$table->string('apellido_m',20);
-			$table->email('email_cliente')->unique();
+			$table->string('email_cliente')->unique();
 			$table->integer('telefono_cliente');
 			$table->rememberToken();
 			$table->timestamps();

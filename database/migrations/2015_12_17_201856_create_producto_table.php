@@ -17,7 +17,7 @@ class CreateProductoTable extends Migration {
 			$table->integer('id_producto');
 			$table->primary('id_producto');
 			$table->integer('id_categoria');
-			$table->foreign('id_categoria')->references('id_categoria')->on('categoria');
+			//$table->foreign('id_categoria')->references('id_categoria')->on('categoria');
 			$table->string('descripcion_producto',20);
 			$table->float('precio');
 			$table->integer('cantidad_producto');

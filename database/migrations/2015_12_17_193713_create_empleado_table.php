@@ -12,14 +12,15 @@ class CreateEmpleadoTable extends Migration {
 	 */
 	public function up()
 	{
+
 		Schema::create('empleado', function(Blueprint $table)
 		{
 			$table->integer('rut_empleado');
 			$table->primary('rut_empleado');
 			$table->integer('id_direccion');
-			$table->foreign('id_direccion')->references('id_direccion')->on('direccion');
+			//$table->foreign('id_direccion')->references('id_direccion')->on('direccion');
 			$table->integer('rut_empresa');
-			$table->foreign('rut_empresa')->references('rut_empresa')->on('empresa');
+			//$table->foreign('rut_empresa')->references('rut_empresa')->on('empresa');
 			$table->string('nombre_empleado',20);
 			$table->string('apellido_p',20);
 			$table->string('apellido_m',20);
@@ -28,6 +29,7 @@ class CreateEmpleadoTable extends Migration {
 			$table->rememberToken();
 			$table->timestamps();
 		});
+
 	}
 
 	/**
