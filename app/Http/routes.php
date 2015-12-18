@@ -19,3 +19,5 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+Route::get('articulos', 'ArticulosController@index');
+Route::get('articulos/crear','ArticulosController@create');
