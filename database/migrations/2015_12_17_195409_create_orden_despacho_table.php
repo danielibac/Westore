@@ -16,6 +16,7 @@ class CreateOrdenDespachoTable extends Migration {
 		{
 			$table->integer('numero_despacho');
 			$table->primary('numero_despacho');
+			$table->integer('rut_empresa');
 			$table->dateTime('fecha_emision_despacho');
 			$table->float('monto_total');
 			$table->rememberToken();

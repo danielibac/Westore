@@ -16,7 +16,7 @@ class CreateEmpresaTable extends Migration {
 		{
 			$table->integer('rut_empresa');
 			$table->primary('rut_empresa');
-			$table->integer('numero_despacho');
+			//$table->integer('numero_despacho');
 			//$table->foreign('numero_despacho')->references('numero_despacho')->on('orden_despacho');
 			$table->integer('id_direccion');
 			//$table->foreign('id_direccion')->references('id_direccion')->on('direccion');
