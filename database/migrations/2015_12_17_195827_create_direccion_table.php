@@ -16,9 +16,9 @@ class CreateDireccionTable extends Migration {
 		{
 			$table->integer('id_direccion');
 			$table->primary('id_direccion');
-			$table->integer('rut_empresa');
+			//$table->integer('rut_empresa');
 			//$table->foreign('rut_empresa')->references('rut_empresa')->on('empresa');
-			$table->integer('id_cliente');
+			//$table->integer('id_cliente');
 			//$table->foreign('id_cliente')->references('id_cliente')->on('cliente');
 			$table->string('calle',20);
 			$table->integer('numero');

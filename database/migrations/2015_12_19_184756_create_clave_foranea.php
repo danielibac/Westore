@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Agregarclavesforaneas extends Migration {
+class CreateClaveForanea extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -20,15 +20,15 @@ class Agregarclavesforaneas extends Migration {
 
 		Schema::table('empresa', function($table)
 		{
-			$table->foreign('numero_despacho')->references('numero_despacho')->on('orden_despacho');
+			//$table->foreign('numero_despacho')->references('numero_despacho')->on('orden_despacho');
 			$table->foreign('id_direccion')->references('id_direccion')->on('direccion');
 		});
 
-		Schema::table('direccion', function($table)
+		/*Schema::table('direccion', function($table)
 		{
-			$table->foreign('rut_empresa')->references('rut_empresa')->on('empresa');
-			$table->foreign('id_cliente')->references('id_cliente')->on('cliente');
-		});
+			//$table->foreign('rut_empresa')->references('rut_empresa')->on('empresa');
+			//$table->foreign('id_cliente')->references('id_cliente')->on('cliente');
+		});*/
 
 		Schema::table('orden_de_compra', function($table)
 		{
@@ -56,6 +56,15 @@ class Agregarclavesforaneas extends Migration {
 
 		});
 
+		Schema::table('orden_despacho', function($table)
+		{
+			$table->foreign('rut_empresa')->references('rut_empresa')->on('empresa');
+		});
+
+		Schema::table('imagen', function($table)
+		{
+			$table->foreign('id_producto')->references('id_producto')->on('producto');
+		});
 	}
 
 	/**
@@ -69,3 +78,5 @@ class Agregarclavesforaneas extends Migration {
 	}
 
 }
+
+
