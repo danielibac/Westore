@@ -6,4 +6,8 @@ class Categoria extends Model {
 
 	//
     protected $table = 'categoria';
+    protected $fillable = [
+    'id_categoria',
+    'nombre_categoria'
+    ];
 }
