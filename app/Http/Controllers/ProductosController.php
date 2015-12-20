@@ -1,10 +1,13 @@
 <?php namespace App\Http\Controllers;
 
+//use Illuminate\Support\Facades\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Categoria;
 use App\Producto;
-use Illuminate\Http\Request;
+use Request;
+
+
 
 class ProductosController extends Controller {
 
@@ -23,10 +26,10 @@ class ProductosController extends Controller {
 
         //if(uploads){
 
-        Request::file('archivo')->move($path);
+        Request::file('imagen')->move($path);
             $inputs=Request::all();
             Producto::create($inputs);
-            return redirect('/');
+            return redirect('/productos/crear');
 
         //}
 

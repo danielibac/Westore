@@ -70,7 +70,7 @@
         </div>
 
         <div class="form-group"></div>
-            {!! Form::submit('Agregar producto', ['class' => ' btn btn-primary']) !!}
+    {!! Form::submit('Agregar producto', ['class' => ' btn btn-primary']) !!}
         </div>
 
 
