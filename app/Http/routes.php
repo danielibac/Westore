@@ -22,3 +22,4 @@ Route::controllers([
 Route::get('articulos', 'ArticulosController@index');
 Route::get('articulos/crear','ArticulosController@create');
 Route::get('productos/crear','ProductosController@create');
+Route::post('productos','ProductosController@store');
