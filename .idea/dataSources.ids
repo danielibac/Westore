@@ -62,8 +62,8 @@
       <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
       <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
       <primary-key name="PRIMARY" columns="rut_empleado"/>
-      <foreign-key name="empleado_rut_empresa_foreign" columns="rut_empresa" ref-table="empresa" ref-schema="" ref-catalog="db-sitio-dos" ref-columns="rut_empresa" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="empleado_id_direccion_foreign" columns="id_direccion" ref-table="direccion" ref-schema="" ref-catalog="db-sitio-dos" ref-columns="id_direccion" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="empleado_rut_empresa_foreign" columns="rut_empresa" ref-table="empresa" ref-schema="" ref-catalog="db-sitio-dos" ref-columns="rut_empresa" update-rule="3" delete-rule="3" deferrability="2"/>
       <index name="empleado_email_unique" unique="true" columns="email"/>
       <index name="empleado_id_direccion_foreign" unique="false" columns="id_direccion"/>
       <index name="empleado_rut_empresa_foreign" unique="false" columns="rut_empresa"/>
@@ -119,9 +119,9 @@
       <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
       <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
       <primary-key name="PRIMARY" columns="id_orden"/>
-      <foreign-key name="orden_de_compra_rut_proveedores_foreign" columns="rut_proveedores" ref-table="proveedores" ref-schema="" ref-catalog="db-sitio-dos" ref-columns="rut_proveedores" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="orden_de_compra_id_producto_foreign" columns="id_producto" ref-table="producto" ref-schema="" ref-catalog="db-sitio-dos" ref-columns="id_producto" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="orden_de_compra_rut_empresa_foreign" columns="rut_empresa" ref-table="empresa" ref-schema="" ref-catalog="db-sitio-dos" ref-columns="rut_empresa" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="orden_de_compra_rut_proveedores_foreign" columns="rut_proveedores" ref-table="proveedores" ref-schema="" ref-catalog="db-sitio-dos" ref-columns="rut_proveedores" update-rule="3" delete-rule="3" deferrability="2"/>
       <index name="orden_de_compra_id_producto_foreign" unique="false" columns="id_producto"/>
       <index name="orden_de_compra_rut_empresa_foreign" unique="false" columns="rut_empresa"/>
       <index name="orden_de_compra_rut_proveedores_foreign" unique="false" columns="rut_proveedores"/>
@@ -200,10 +200,10 @@
       <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
       <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
       <primary-key name="PRIMARY" columns="numero_despacho"/>
-      <foreign-key name="venta_numero_despacho_foreign" columns="numero_despacho" ref-table="orden_despacho" ref-schema="" ref-catalog="db-sitio-dos" ref-columns="numero_despacho" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="venta_id_cliente_foreign" columns="id_cliente" ref-table="cliente" ref-schema="" ref-catalog="db-sitio-dos" ref-columns="id_cliente" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="venta_id_medio_pago_foreign" columns="id_medio_pago" ref-table="medio_pago" ref-schema="" ref-catalog="db-sitio-dos" ref-columns="id_medio_pago" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="venta_id_producto_foreign" columns="id_producto" ref-table="producto" ref-schema="" ref-catalog="db-sitio-dos" ref-columns="id_producto" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="venta_numero_despacho_foreign" columns="numero_despacho" ref-table="orden_despacho" ref-schema="" ref-catalog="db-sitio-dos" ref-columns="numero_despacho" update-rule="3" delete-rule="3" deferrability="2"/>
       <index name="venta_id_cliente_foreign" unique="false" columns="id_cliente"/>
       <index name="venta_id_medio_pago_foreign" unique="false" columns="id_medio_pago"/>
       <index name="venta_id_producto_foreign" unique="false" columns="id_producto"/>

@@ -7,24 +7,24 @@
 
     {!! Form::open(array('method' => 'post', 'url' =>'productos', 'name' => 'form', 'files' => true)) !!}
         <div class="form-group  "></div>
-            {!! Form::label('identificador_producto','Identificador del producto') !!}
+            {!! Form::label('id_producto','Identificador del producto') !!}
             </br>
-            {!! Form::text('identificador_producto',null,['class' => 'form-control']) !!}
+            {!! Form::text('id_producto',null,['class' => 'form-control']) !!}
         </div>
 
         <div class="form-group"></div>
-            {!!Form::label('categoria','Categoria') !!}
+            {!!Form::label('id_categoria','Categoria') !!}
             </br>
-            {!!Form::select('categoria', $categorias) !!}
+        {!!Form::select('id_categoria', $categorias) !!}
             {!!Form::submit('agregar categoria',['class' => ' btn btn-primary']) !!}
-            {!!Form::submit('eliminar categoria',['class' => ' btn btn-primary ']) !!}
+            {!!Form::submit('eliminar categoria',['class' => ' btn btn-danger ']) !!}
 
         </div>
 
         <div class="form-group"></div>
             {!! Form::label('descripcion_producto','Descripcion producto') !!}
             </br>
-            {!! Form::textarea('identificador_producto',null,['class' => 'form-group']) !!}
+            {!! Form::textarea('descripcion_producto',null,['class' => 'form-group']) !!}
         </div>
 
         <div class="form-group"></div>
@@ -52,19 +52,19 @@
         </div>
 
         <div class="form-group"></div>
-            {!! Form::label('stock_minimo','Stock minimo') !!}
+            {!! Form::label('variable_holgura','Stock minimo') !!}
             </br>
-            {!! Form::text('stock_minimo',null,['class' => 'form-control']) !!}
+            {!! Form::text('variable_holgura',null,['class' => 'form-control']) !!}
         </div>
 
         <div class="form-group"></div>
-            {!! Form::label('cantidad_ficticia','Recomendacion cantidad para futuros pedidos') !!}
+            {!! Form::label('cantidad_ficticia_compra','Recomendacion cantidad para futuros pedidos') !!}
             </br>
-            {!! Form::text('cantidad_ficticia',null,['class' => 'form-control']) !!}
+            {!! Form::text('cantidad_ficticia_compra',null,['class' => 'form-control']) !!}
         </div>
 
         <div class="form-group"></div>
-            {!! Form::label('agregar_imagen','Agregar imagen') !!}
+            {!! Form::label('imagen','Agregar imagen') !!}
             {!! Form::file('imagen') !!}
 
         </div>
