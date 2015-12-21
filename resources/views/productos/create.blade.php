@@ -2,8 +2,9 @@
 @extends('master')
 
 @section('contenido')
-
-    <h1>Crear productos</h1>
+    <div title="">
+        <h1 class="text-primary text-center">Ingresar producto</h1>
+    </div>
 
     {!! Form::open(array('method' => 'post', 'url' =>'productos', 'name' => 'form', 'files' => true)) !!}
         <div class="form-group  "></div>
@@ -16,8 +17,6 @@
             {!!Form::label('id_categoria','Categoria') !!}
             </br>
         {!!Form::select('id_categoria', $categorias) !!}
-            {!!Form::submit('agregar categoria',['class' => ' btn btn-primary']) !!}
-            {!!Form::submit('eliminar categoria',['class' => ' btn btn-danger ']) !!}
 
         </div>
 
@@ -75,6 +74,7 @@
 
 
     {!! Form::close() !!}
+
 
     @if($errors->any())
         <ul class ="alert alert-demage">

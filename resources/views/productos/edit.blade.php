@@ -1,7 +1,7 @@
 @extends('master')
 
 @section('contenido')
-<h1>editar producto:{{$producto->id_producto}}</h1>
+<h1 class="text-primary text-center">Editar producto</h1>
 
 {!! Form::model($producto,array('method' => 'PATCH','action' => ['ProductosController@update', $producto->id_producto])) !!}
 <div class="form-group  "></div>
@@ -14,8 +14,6 @@
 {!!Form::label('id_categoria','Categoria') !!}
 </br>
 {!!Form::select('id_categoria', $categorias) !!}
-{!!Form::submit('agregar categoria',['class' => ' btn btn-primary']) !!}
-{!!Form::submit('eliminar categoria',['class' => ' btn btn-danger ']) !!}
 
 </div>
 
@@ -73,6 +71,12 @@
 
 {!! Form::close() !!}
 
+{!! Form::open(['method' => 'DELETE', 'route' => ['productos.destroy',$producto->id_producto]]) !!}
+    <div class="form-group"></div>
+
+                <button  type="submit" onclick="return confirm('¿Seguro que deseas eliminar el producto?')" class="btn btn-danger" >Elimina producto</button>
+    </div>
+{!! Form::close() !!}
 @if($errors->any())
     <ul class ="alert alert-demage">
         @foreach($errors->all() as $error)

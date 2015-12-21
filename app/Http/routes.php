@@ -24,3 +24,4 @@ Route::get('articulos/crear','ArticulosController@create');
 //Route::get('productos/crear','ProductosController@create');
 //Route::post('productos','ProductosController@store');
 Route::resource('productos','ProductosController');
+Route::resource('categorias','CategoriasController');

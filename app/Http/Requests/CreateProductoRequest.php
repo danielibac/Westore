@@ -22,16 +22,16 @@ class CreateProductoRequest extends Request {
 	public function rules()
 	{
 		return [
-			'id_producto' => 'required',
+			'id_producto' => 'required|integer|unique:producto',
 			'id_categoria' => 'required',
 			'descripcion_producto' => 'required',
-			'precio' => 'required',
-			'cantidad_producto' => 'required',
+			'precio' => 'required|numeric',
+			'cantidad_producto' => 'required|integer',
 			'marca' => 'required',
 			'modelo' => 'required',
-			'variable_holgura' => 'required',
-			'cantidad_ficticia_compra' => 'required',
-			'imagen' => 'required'
+			'variable_holgura' => 'required|integer',
+			'cantidad_ficticia_compra' => 'required|integer',
+			'imagen' => 'required|image'
 
 			//
 		];

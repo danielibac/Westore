@@ -9,13 +9,19 @@ use App\Producto;
 use App\Imagen;
 use Request;
 use Input;
+use DB;
+use File;
 
 
 
 class ProductosController extends Controller {
 
     public function index(){
-        return view(productos.index);
+        $productos=Producto::all();
+        return view('productos.index', compact('productos'));
+    }
+    public function show(){
+        return view('productos.index');
     }
 
 	public function create(){
@@ -49,7 +55,7 @@ class ProductosController extends Controller {
 
 
 
-            return redirect('/productos/crear');
+            return redirect('/productos');
 
         //}
 
@@ -70,7 +76,22 @@ class ProductosController extends Controller {
 
     public function destroy($id)
     {
-        return "Eliminando el registro $id";
+        $imagen = DB::table('imagen')->where('id_producto', $id)->delete();
+
+        //File::delete('/uploads/imagenes/' . $imagen->ruta_imagen);
+
+        //$query = DB::table('imagen')->where('id_producto', '=', $id);
+        //$imagen = $query->first();
+        //print_r($image);
+        //return 'end';
+        //File::delete(public_p . '/uploads/imagenes/thumb-' . $image->path);
+        //File::delete('/uploads/imagenes/' . $imagen->ruta_imagen);
+
+        //var_dump($imagen->id_producto);
+        //$query->delete();
+        $producto=Producto::find($id);
+        $producto->delete();
+        return redirect('productos');
     }
 
 }
