@@ -31,14 +31,14 @@ class CategoriasController extends Controller {
     public function update($id, CreateCategoriaRequest $recuest){
         $categoria= Categoria::find($id);
         $categoria->update($recuest->all());
-        return redirect('productos');
+        return redirect('categorias');
     }
 
     public function destroy($id)
     {
         $categoria=Categoria::find($id);
         $categoria->delete();
-        return redirect('productos');
+        return redirect('categorias');
     }
 
 }

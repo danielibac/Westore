@@ -18,7 +18,11 @@
                 <tr>
                     <td>{{$categoria->id_categoria}}</td>
                     <td>{{$categoria->nombre_categoria}}</td>
-                    <td><a href="/categorias/{{$categoria->id_categoria}}/edit" class="btn btn-warning btn-xs">Modificar</a> </td>
+                    <td><a href="/categorias/{{$categoria->id_categoria}}/edit" class="btn btn-warning btn-xs">Modificar</a>
+                        {!! Form::open(array('method' => 'DELETE','action' => ['CategoriasController@destroy', $categoria->id_categoria])) !!}
+                        <button  type="submit" onclick="return confirm('¿Seguro que deseas eliminar la categoria?')" class="btn btn-danger btn-xs" >Elimina categoria</button>
+                        {!! Form::close() !!}</td>
+
                 </tr>
             @endforeach
             </tbody>
