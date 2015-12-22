@@ -1,8 +1,10 @@
 @extends('master')
 
 @section('contenido')
+    <br>
     <div class="panel panel-default">
-        <div><a href="/productos/create" class="btn btn-success ">Agregar nuevo producto</a></div>
+        <div><a href="/productos/create" class="btn btn-success ">Agregar nuevo producto</a>
+        <a href="/categorias" class="btn btn-success ">Agregar nueva categoria</a></div>
         <div class="panel-heading">Lista de productos</div>
         <table class="table table-responsive table-bordered">
             <thead>

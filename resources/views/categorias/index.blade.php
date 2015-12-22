@@ -1,6 +1,7 @@
 @extends('master')
 
 @section('contenido')
+    <br>
     <div class="panel panel-default">
         <div><a href="/categorias/create" class="btn btn-success ">Agregar nueva categoria</a></div>
         <div class="panel-heading">Lista de categorias</div>
