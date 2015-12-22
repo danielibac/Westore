@@ -25,3 +25,12 @@ Route::get('articulos/crear','ArticulosController@create');
 //Route::post('productos','ProductosController@store');
 Route::resource('productos','ProductosController');
 Route::resource('categorias','CategoriasController');
+
+Route::resource('clientes', 'UsersController');
+Route::resource('empleados', 'EmpController');
+
+
+Route::controllers([
+	'auth' => 'Auth\AuthController',
+	'password' => 'Auth\PasswordController',
+]);
