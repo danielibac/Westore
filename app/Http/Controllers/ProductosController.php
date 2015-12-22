@@ -4,10 +4,11 @@
 use App\Http\Requests;
 use App\Http\Requests\CreateProductoRequest;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use App\Categoria;
 use App\Producto;
 use App\Imagen;
-use Request;
+//use Request;
 use Input;
 use DB;
 use File;
@@ -16,9 +17,11 @@ use File;
 
 class ProductosController extends Controller {
 
-    public function index(){
+    public function index(Request $recuest){
+        $productob=Producto::id_producto($recuest->get('id_producto'))->orderBy('id_producto','marca')->paginate();
+
         $productos=Producto::all();
-        return view('productos.index', compact('productos'));
+        return view('productos.index', compact('productos','productob'));
     }
     public function show(){
         return view('productos.index');
@@ -33,7 +36,7 @@ class ProductosController extends Controller {
     public function store(CreateProductoRequest $request){
         $path = 'uploads/imagenes';
 
-        $file = Request::file('imagen');
+        $file = \Request::file('imagen');
         $archivo = $file->getClientOriginalName();
         $uploads = $file->move($path,$archivo);
 
