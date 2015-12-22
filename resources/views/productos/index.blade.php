@@ -9,7 +9,7 @@
 
             {!! Form::open(['url'=>'productos','method' =>'GET', 'class' =>'navbar-form navbar-left pull-right', 'role' => 'search']) !!}
             <div class="form-group">
-                {!! Form::text('id_producto',null,['class' => 'form-control', 'placeholder' =>'Ingrese id producto']) !!}
+                {!! Form::text('id_producto',null,['class' => 'form-control', 'placeholder' =>'Producto,Marca o Modelo']) !!}
             </div>
             <button type="submit" class="btn btn-default">Buscar</button>
         {!! Form::close() !!}

@@ -77,12 +77,16 @@
                 <button  type="submit" onclick="return confirm('¿Seguro que deseas eliminar el producto?')" class="btn btn-danger" >Elimina producto</button>
     </div>
 {!! Form::close() !!}
-@if($errors->any())
-    <ul class ="alert alert-demage">
-        @foreach($errors->all() as $error)
-            <li>{{$error}}</li>
-        @endforeach
-    </ul>
-@endif
+
+    @if($errors->any())
+        <div class="alert alert-danger" role="alert">
+        <ul class ="alert alert-demage">
+            @foreach($errors->all() as $error)
+                <li>{{$error}}</li>
+            @endforeach
+        </ul>
+        </div>
+    @endif
+
 
 @stop

@@ -29,12 +29,16 @@
     <button  type="submit" onclick="return confirm('¿Seguro que deseas eliminar la categoria?')" class="btn btn-danger" >Elimina categoria</button>
     </div>
     {!! Form::close() !!}
+
     @if($errors->any())
+        <div class="alert alert-danger" role="alert">
         <ul class ="alert alert-demage">
             @foreach($errors->all() as $error)
                 <li>{{$error}}</li>
             @endforeach
         </ul>
+        </div>
     @endif
+
 
 @stop

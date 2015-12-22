@@ -38,7 +38,7 @@ class ProductosController extends Controller {
 
         $file = \Request::file('imagen');
         $archivo = $file->getClientOriginalName();
-        $uploads = $file->move($path,$archivo);
+        $uploads = $file->move($path,$irchivo);
 
         //if(uploads){
 

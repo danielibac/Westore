@@ -22,6 +22,6 @@ class Producto extends Model {
 
     public function ScopeId_producto($query,$id_producto){
         //$query->where('id_producto',$id_producto);
-        $query->where(\DB::raw("CONCAT(id_producto, ' ', marca, ' ',modelo, ' ',descripcion_producto, ' ',precio)"),"LIKE","%$id_producto%");
+        $query->where(\DB::raw("CONCAT(id_producto, ' ', marca, ' ',modelo)"),"LIKE","%$id_producto%");
     }
 }

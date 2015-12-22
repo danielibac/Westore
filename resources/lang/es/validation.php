@@ -1,7 +1,5 @@
 <?php
-
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Validation Language Lines
@@ -12,9 +10,8 @@ return [
     | such as the size rules. Feel free to tweak each of these messages.
     |
     */
-
     'accepted'             => ':attribute debe ser aceptado.',
-    'active_url'           => ':attribute no es una URL válida.',
+    'active_url'           => ':attribute no es una URL valida.',
     'after'                => ':attribute debe ser una fecha posterior a :date.',
     'alpha'                => ':attribute solo debe contener letras.',
     'alpha_dash'           => ':attribute solo debe contener letras, números y guiones.',
@@ -28,25 +25,25 @@ return [
         'array'   => ':attribute tiene que tener entre :min - :max ítems.',
     ],
     'boolean'              => 'El campo :attribute debe tener un valor verdadero o falso.',
-    'confirmed'            => 'La confirmación de :attribute no coincide.',
-    'date'                 => ':attribute no es una fecha válida.',
+    'confirmed'            => 'La confirmacion de :attribute no coincide.',
+    'date'                 => ':attribute no es una fecha valida.',
     'date_format'          => ':attribute no corresponde al formato :format.',
     'different'            => ':attribute y :other deben ser diferentes.',
     'digits'               => ':attribute debe tener :digits dígitos.',
     'digits_between'       => ':attribute debe tener entre :min y :max dígitos.',
     'email'                => ':attribute no es un correo válido',
-    'exists'               => ':attribute es inválido.',
+    'exists'               => ':attribute es invalido.',
     'filled'               => 'El campo :attribute es obligatorio.',
     'image'                => ':attribute debe ser una imagen.',
-    'in'                   => ':attribute es inválido.',
-    'integer'              => ':attribute debe ser un número entero.',
+    'in'                   => ':attribute es invalido.',
+    'integer'              => ':attribute debe ser un numero entero.',
     'ip'                   => ':attribute debe ser una dirección IP válida.',
     'json'                 => 'El campo :attribute debe tener una cadena JSON válida.',
     'max'                  => [
         'numeric' => ':attribute no debe ser mayor a :max.',
         'file'    => ':attribute no debe ser mayor que :max kilobytes.',
         'string'  => ':attribute no debe ser mayor que :max caracteres.',
-        'array'   => ':attribute no debe tener más de :max elementos.',
+        'array'   => ':attribute no debe tener mas de :max elementos.',
     ],
     'mimes'                => ':attribute debe ser un archivo con formato: :values.',
     'min'                  => [
@@ -55,16 +52,16 @@ return [
         'string'  => ':attribute debe contener al menos :min caracteres.',
         'array'   => ':attribute debe tener al menos :min elementos.',
     ],
-    'not_in'               => ':attribute es inválido.',
-    'numeric'              => ':attribute debe ser numérico.',
+    'not_in'               => ':attribute es invalido.',
+    'numeric'              => ':attribute debe ser numerico.',
     'regex'                => 'El formato de :attribute es inválido.',
     'required'             => 'El campo :attribute es obligatorio.',
     'required_if'          => 'El campo :attribute es obligatorio cuando :other es :value.',
     'required_unless'      => 'The :attribute field is required unless :other is in :values.',
-    'required_with'        => 'El campo :attribute es obligatorio cuando :values está presente.',
+    'required_with'        => 'El campo :attribute es obligatorio cuando :values esta presente.',
     'required_with_all'    => 'El campo :attribute es obligatorio cuando :values está presente.',
     'required_without'     => 'El campo :attribute es obligatorio cuando :values no está presente.',
-    'required_without_all' => 'El campo :attribute es obligatorio cuando ninguno de :values estén presentes.',
+    'required_without_all' => 'El campo :attribute es obligatorio cuando ninguno de :values esten presentes.',
     'same'                 => ':attribute y :other deben coincidir.',
     'size'                 => [
         'numeric' => 'El tamaño de :attribute debe ser :size.',
@@ -73,10 +70,9 @@ return [
         'array'   => ':attribute debe contener :size elementos.',
     ],
     'string'               => 'El campo :attribute debe ser una cadena de caracteres.',
-    'timezone'             => 'El :attribute debe ser una zona válida.',
+    'timezone'             => 'El :attribute debe ser una zona valida.',
     'unique'               => ':attribute ya ha sido registrado.',
-    'url'                  => 'El formato :attribute es inválido.',
-
+    'url'                  => 'El formato :attribute es invalido.',
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Language Lines
@@ -87,13 +83,11 @@ return [
     | specify a specific custom language line for a given attribute rule.
     |
     */
-
     'custom'               => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
     ],
-
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Attributes
@@ -104,9 +98,7 @@ return [
     | of "email". This simply helps us make messages a little cleaner.
     |
     */
-
     'attributes' => [
         //
     ],
-
 ];

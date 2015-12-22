@@ -31,7 +31,7 @@ class CreateProductoRequest extends Request {
 			'modelo' => 'required',
 			'variable_holgura' => 'required|integer',
 			'cantidad_ficticia_compra' => 'required|integer',
-			'imagen' => 'required|image'
+			'imagen' => 'required|image|unique:imagen'
 
 			//
 		];
