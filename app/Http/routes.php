@@ -11,16 +11,16 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('home', 'WelcomeController@index');
 
-Route::get('home', 'HomeController@index');
+Route::get('/', 'HomeController@index');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
-Route::get('articulos', 'ArticulosController@index');
-Route::get('articulos/crear','ArticulosController@create');
+//Route::get('articulos', 'ArticulosController@index');
+//Route::get('articulos/crear','ArticulosController@create');
 //Route::get('productos/crear','ProductosController@create');
 //Route::post('productos','ProductosController@store');
 Route::resource('productos','ProductosController');
